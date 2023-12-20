@@ -1,0 +1,64 @@
+---
+title: "What is the Utility of Estimating Latent vs. Observed Change?"
+subtitle: "Seminar on Research Designs"
+author: Andreas M. Brandmaier
+format: 
+  revealjs:
+    theme: [simple, style.css] #  “simple”, “dark”, “black”, “sky”, “beige”, “serif”, “solarized”, “blood”, “moon”, “night”, “league”, or  “white”
+    footer: "6th ESLR Workshop, 2023: Social Learning in Complex Systems"
+    highlight-style: a11y
+    revealjs-plugins:
+    - countdown
+editor: visual
+date: "05/07/2023"
+editor: visual
+---
+
+```{r init, echo=FALSE}
+library(tidyverse)
+```
+
+## Why is change interesting?
+
+::: callout-tip
+## "When you're finished changing, you're finished."
+
+\- Benjamin Franklin
+:::
+
+## Why is change interesting?
+
+--
+
+# Difference scores
+
+- Classic within-person research questions in educational and psychological research concerns a comparison of pre- and post-scores
+- Difference scores are simply the difference between two scores
+
+# The (un)reliability issue
+
+Assume, we have two scores $X$ and $Y$ and form a differences score $D=X-Y$, the reliability of the difference score is:
+
+$$\rho_D = \frac{\rho_{XX'}+\rho_{YY'}-2\rho_{XY}}{2-2\rho_{XY}} $$
+
+with
+
+$\rho_{XY}$ 
+
+
+## Common pitfalls
+
+Regression to the mean
+
+```{r}
+N <- 2000
+set.seed(1234)
+x1 <- rnorm(n=N, mean=100, sd = 15)
+x2 <- rnorm(n=N, mean=100, sd = 15)
+tibble(x1,x2)%>%ggplot(aes(x=x1,y=x2))+geom_point()
+
+ids <- which(x1 <= 70)
+
+tibble(x1,x2) %>% filter(x1<=70) %>%
+  ggplot(aes(x=x2))+geom_density()
+```

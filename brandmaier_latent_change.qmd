@@ -26,14 +26,30 @@ library(tidyverse)
 \- Benjamin Franklin
 :::
 
-## Why is change interesting?
+## Rationales of Longitudinal Research
+
+1.  Direct identification of intraindividual change
+2.  Direct identification of interindividual differences (similarity) in intraindividual change
+3.  Analysis of interrelationships in behavioral change
+4.  Analysis of causes (determinants) of intraindividual change
+5.  Analysis of causes (determinants) of interindividual differences in intraindividual change
+
+From: Baltes and Nesselroade (1979). History and rationale of longitudinal research.
 
 --
 
+# Basics
+
+-   Longitudinal data: multiple persons measured at multiple time points
+
+-   Longitudinal model: ". . . all repeated measures analyses should start with the question,"What is your model for change?""
+
+-- McArdle (2009). Latent Variable Modeling of Differences and Change with Longitudinal Data
+
 # Difference scores
 
-- Classic within-person research questions in educational and psychological research concerns a comparison of pre- and post-scores
-- Difference scores are simply the difference between two scores
+-   Classic within-person research questions in educational and psychological research concerns a comparison of pre- and post-scores
+-   Difference scores are simply the difference between two scores
 
 # The (un)reliability issue
 
@@ -43,8 +59,7 @@ $$\rho_D = \frac{\rho_{XX'}+\rho_{YY'}-2\rho_{XY}}{2-2\rho_{XY}} $$
 
 with
 
-$\rho_{XY}$ 
-
+$\rho_{XY}$ being the
 
 ## Common pitfalls
 
@@ -62,3 +77,34 @@ ids <- which(x1 <= 70)
 tibble(x1,x2) %>% filter(x1<=70) %>%
   ggplot(aes(x=x2))+geom_density()
 ```
+
+# Linear latent change score models
+
+xx
+
+# Model 1: Intercept-Only
+
+![](images/lgcm1.png)
+
+# Model 1: Intercept-Only
+
+![](images/lgcm1.png)
+![](images/lgcm1-data.png)
+
+# Model 2: Intercept and Slope
+
+![](images/lgcm2.png)
+![](images/lgcm2-data.png)
+# Model 3
+
+![](images/lgcm3.png)
+![](images/lgcm3-data.png)
+
+# Model 4
+
+![](images/lgcm4.png)
+![](images/lgcm4-data.png)
+
+# 
+
+Source: CC-BY, Kievit et al., doi: 10.1016/j.dcn.2017.11.007 

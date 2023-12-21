@@ -105,6 +105,8 @@ xx
 ![](images/lgcm4.png)
 ![](images/lgcm4-data.png)
 
-# 
+# Coupled Change
+
+![](images/kievit-changescore.png)
 
 Source: CC-BY, Kievit et al., doi: 10.1016/j.dcn.2017.11.007 

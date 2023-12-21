@@ -9,7 +9,6 @@ format:
     highlight-style: a11y
     revealjs-plugins:
     - countdown
-editor: visual
 date: "05/07/2023"
 editor: visual
 ---
@@ -17,6 +16,10 @@ editor: visual
 ```{r init, echo=FALSE}
 library(tidyverse)
 ```
+
+## Ask questions anytime
+
+![](images/undraw_Engineering_team_a7n2.png)
 
 ## Why is change interesting?
 
@@ -46,10 +49,37 @@ From: Baltes and Nesselroade (1979). History and rationale of longitudinal resea
 
 -- McArdle (2009). Latent Variable Modeling of Differences and Change with Longitudinal Data
 
+# SEM Perspective
+
+- Structural Equation Models express relationships among observed and latent variables
+- Implement estimation of many General Linear Modeling techniques:
+  - t test family
+  - multiple regression
+  - (repeated measures) ANOVA
+  - mixed-effect models
+  - path analysis
+  - mediation models
+  - factor models
+
+# Path diagrams
+
+TODO: Insert path diagram elements
+
+# SEM examples
+
+![](images/sem-factormodel.png)
+  
+# SEM perspective
+
+![](images/sem.png)
+
+
 # Difference scores
 
 -   Classic within-person research questions in educational and psychological research concerns a comparison of pre- and post-scores
 -   Difference scores are simply the difference between two scores
+
+![](images/kievit-changescore.png)
 
 # The (un)reliability issue
 
@@ -107,6 +137,19 @@ xx
 
 # Coupled Change
 
-![](images/kievit-changescore.png)
 
 Source: CC-BY, Kievit et al., doi: 10.1016/j.dcn.2017.11.007 
+
+
+## License
+
+To the extent possible under law and unless otherwise noted, Andreas waived all copyright and related or neighboring rights to this workshop document and the accompanying R source codes. This work is published from: Deutschland/Germany.
+
+Some illustrations by undraw https://undraw.co (see their license https://undraw.co/license)
+
+
+## Thanks
+
+Thank you for being on this journey with me!
+
+Andreas (find me on [Twitter](https://www.twitter.com/brandmaier "Twitter") or [Bluesky: brandmaier.bsky.social](https://bsky.app/profile/brandmaier.bsky.social))
